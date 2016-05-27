@@ -23,7 +23,6 @@ $list_options = array(
 	'base_url' => $base_url,
 	'list_id' => "wiper-$entity->guid",
 	'item_view' => 'lists/wiper/item',
-	'size' => 'tiny',
 );
 
 $subtype = get_input('entity_subtype', ELGG_ENTITIES_NO_VALUE);
