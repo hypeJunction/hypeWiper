@@ -13,7 +13,6 @@ $checkbox = elgg_format_element('input', [
 
 $view = elgg_format_element('button', [
 	'data-href' => elgg_add_action_tokens_to_url(elgg_normalize_url('action/wiper/disable')),
-	'data-confirm' => elgg_echo('question:areyousure'),
 	'class' => 'wiper-action elgg-button elgg-button-action elgg-state-disabled',
 	'disabled' => true,
 	'title' => elgg_echo('wiper:disable:help'),
@@ -22,7 +21,6 @@ $view = elgg_format_element('button', [
 if (elgg_is_admin_logged_in()) {
 	$view .= elgg_format_element('button', [
 		'data-href' => elgg_add_action_tokens_to_url(elgg_normalize_url('action/wiper/enable')),
-		'data-confirm' => elgg_echo('question:areyousure'),
 		'class' => 'wiper-action elgg-button elgg-button-action elgg-state-disabled',
 		'disabled' => true,
 		'title' => elgg_echo('wiper:enable:help'),
@@ -31,7 +29,6 @@ if (elgg_is_admin_logged_in()) {
 
 $view .= elgg_format_element('button', [
 	'data-href' => elgg_add_action_tokens_to_url(elgg_normalize_url('action/wiper/delete')),
-	'data-confirm' => elgg_echo('question:areyousure'),
 	'class' => 'wiper-action elgg-button elgg-button-action elgg-state-disabled',
 	'disabled' => true,
 	'title' => elgg_echo('wiper:delete:help'),
