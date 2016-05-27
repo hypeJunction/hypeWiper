@@ -3,7 +3,7 @@
 
 	<name>hypeWiper</name>
 	<id>hypeWiper</id>
-	<version type="dist">1.0.0</version>
+	<version type="dist">1.0.1</version>
 
 	<description>Bulk delete user and group content</description>
 	<category>content</category>
