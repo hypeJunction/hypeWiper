@@ -6,12 +6,12 @@ define(function (require) {
 
 	function toggleUiElements($container) {
 		var $container = $container || $('body');
-		if ($('.wiper-checkbox:checked', $container).length) {
+		if ($('.wiper-checkbox:visible:checked', $container).length) {
 			$('.wiper-action', $container).removeClass('elgg-state-disabled').prop('disabled', false);
 		} else {
 			$('.wiper-action', $container).addClass('elgg-state-disabled').prop('disabled', true);
 		}
-		if ($('.wiper-checkbox:checked', $container).length === $('.wiper-checkbox').length) {
+		if ($('.wiper-checkbox:visible:checked', $container).length === $('.wiper-checkbox:visible').length) {
 			$('.wiper-checkbox-toggle', $container).prop('checked', true);
 		} else {
 			$('.wiper-checkbox-toggle', $container).prop('checked', false);
@@ -20,7 +20,7 @@ define(function (require) {
 
 	$(document).on('change', '.wiper-checkbox-toggle', function () {
 		var $container = $(this).closest('.wiper-module');
-		$('.wiper-checkbox').prop('checked', $(this).is(':checked'));
+		$('.wiper-checkbox:visible').prop('checked', $(this).is(':checked'));
 		toggleUiElements($container);
 	});
 
@@ -37,7 +37,7 @@ define(function (require) {
 		e.preventDefault();
 		var $container = $(this).closest('.wiper-module');
 		var href = $(this).data('href');
-		var $checked = $('.wiper-checkbox:checked', $container);
+		var $checked = $('.wiper-checkbox:visible:checked', $container);
 		var guids = [];
 		$checked.each(function() {
 			guids.push($(this).val());
