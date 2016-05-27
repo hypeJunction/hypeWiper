@@ -1,0 +1,34 @@
+.wiper-subtitle-element {
+	display: block;
+}
+.wiper-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wiper-list-item > .wiper-input {
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+.wiper-list-item > .wiper-view {
+    flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+}
+
+.wiper-list-item > .wiper-view > * {
+	flex: 0 0 auto;
+}
+
+.wiper-buttonbank button {
+	margin-right: 5px;
+}
+.wiper-buttonbank button:last-child {
+	margin-right: 0;
+}
+
+.wiper-action[disabled] {
+	display: none;
+}

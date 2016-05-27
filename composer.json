@@ -1,0 +1,29 @@
+{
+	"name": "hypejunction/hypewiper",
+	"version": "0.0.0",
+	"type": "elgg-plugin",
+	"description": "Bulk delete user and group content",
+	"homepage": "http://hypejunction.com",
+	"keywords": [
+		"elgg", "plugin", "admin", "bulk delete"
+	],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Ismayil Khayredinov",
+			"email": "info@hypejunction.com"
+		}
+	],
+	"extra": {
+		"installer-name": "hypeWiper"
+	},
+	"require": {
+		"composer/installers": "~1.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "classes/"
+		}
+	}
+}
+
