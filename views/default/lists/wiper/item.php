@@ -20,6 +20,11 @@ if (!$entity->getVolatileData('search_matched_title')) {
 	$entity->setVolatileData('search_matched_title', $title);
 }
 
+$url = $entity->getVolatileData('search_url');
+if (!$url) {
+	$url = $entity->getURL();
+}
+
 $title = $entity->getVolatileData('search_matched_title');
 $title = elgg_view('output/url', array(
 	'text' => $title,
@@ -39,11 +44,6 @@ if (!$icon) {
 		// other problems if the owner can't be found.
 		$icon = elgg_view_entity_icon($entity, $size);
 	}
-}
-
-$url = $entity->getVolatileData('search_url');
-if (!$url) {
-	$url = $entity->getURL();
 }
 
 $subtitle = array();
