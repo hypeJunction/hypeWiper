@@ -3,7 +3,7 @@ define(function (require) {
 	var elgg = require('elgg');
 	var $ = require('jquery');
 	var spinner = require('elgg/spinner');
-	
+
 	function toggleUiElements($container) {
 		var $container = $container || $('body');
 		if ($('.wiper-checkbox:checked', $container).length) {
@@ -30,6 +30,10 @@ define(function (require) {
 	});
 
 	$(document).on('click', '.wiper-action', function (e) {
+		if (!confirm(elgg.echo('question:areyousure'))) {
+			return false;
+		}
+
 		e.preventDefault();
 		var $container = $(this).closest('.wiper-module');
 		var href = $(this).data('href');
