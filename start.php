@@ -23,7 +23,7 @@ elgg_register_event_handler('init', 'system', function() {
 	]);
 
 	elgg_register_action('wiper/disable', __DIR__ . '/actions/wiper/disable.php');
-	elgg_register_action('wiper/disable', __DIR__ . '/actions/wiper/disable.php', 'admin');
+	elgg_register_action('wiper/enable', __DIR__ . '/actions/wiper/enable.php', 'admin');
 	elgg_register_action('wiper/delete', __DIR__ . '/actions/wiper/delete.php');
 
 	elgg_extend_view('elgg.css', 'wiper.css');
